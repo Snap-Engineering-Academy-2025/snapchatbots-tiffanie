@@ -3,6 +3,8 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, SafeAreaView, Platform, Text } from "react-native";
 import BasicChatbot from "../components/BasicChatbot";
 import BakersChatbot from "../components/BakersChatbot";
+import SmiskiTriviaChatbot from "../components/SmiskiTriviaChatbot";
+import ChanhoChatbot from "../components/ChanhoChatbot";
 
 // prettier-ignore
 export const CHATBOTS = {
@@ -17,6 +19,18 @@ export const CHATBOTS = {
     name: "Baker's Dog Trivia",
     imageUrl: "https://img.freepik.com/free-vector/cute-dog-robot-cartoon-character-animal-technology-isolated_138676-3143.jpg?w=150",
     component: BakersChatbot,
+  },
+  "SmiskiTriviaChatbot": {
+    id: "SmiskiTriviaChatbot",
+    name: "Do you know your Smiski?!",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsHtYw-HtqTs0tfPGBTkDCzeEedjSsuocYEw&s",
+    component: SmiskiTriviaChatbot,
+  },
+  "ChanhoChatbot": {
+    id: "SmiskiTriviaChatbot",
+    name: "Chanho's Trivia!",
+    imageUrl: "https://thumbs.dreamstime.com/b/cute-cat-portrait-square-photo-beautiful-white-closeup-105311158.jpg",
+    component: ChanhoChatbot,
   }
 };
 
