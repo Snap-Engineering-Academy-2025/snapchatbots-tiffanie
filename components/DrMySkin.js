@@ -1,23 +1,30 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { GiftedChat } from "react-native-gifted-chat";
 import { getChat } from "../utils/getChatGPT";
-import { CHATGPT_KEY } from '@env';
-import CookOrBeCooked from "../utils/CookOrBeCooked.json";
+import DrMrSkin from "../utils/DrMrSkin.json";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, SafeAreaView, Platform } from "react-native";
 
 const prompt = [
   {
     role: "system",
-    content:
-      CookOrBeCooked.prompt,
+    content: `you are Dr.MySkin, a SkinCareGPT where you have a lot of information about skincare, cerave products, and how to use these products.
+
+1) ask the user for their name
+2) ask the user about their current skin concerns
+3) after getting response, ask them WHERE their skin concerns are and their skin type
+4) Give them a skincare routine (day and night) using cerave products ONLY. Include links
+
+be concise but still nice. use emojis throughout. Always keep a conversational, upbeat, motivational tone. Use colloquial slang and second-person.
+
+keep response times short, but still think about the best response. ALSO, DON'T FORGET TO BE CONCISE!!! End it at the end with thank you USER_NAME for asking Dr.MySkin for advice`,
   },
 ];
 
 const CHATBOT_USER_OBJ = {
   _id: 2,
-  name: "React Native Chatbot",
-  avatar: "https://loremflickr.com/140/140",
+  name: "Dr. MrSkin",
+  avatar: "https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fus-east1-aws.api.snapchat.com%2Fweb-capture%2Fwww.snapchat.com%2Fadd%2Fdaisymartinez92%2Fpreview%2Fsquare.jpeg%3Fxp_id%3D1",
   role: "assistant"
 };
 
